@@ -1,16 +1,7 @@
 # flameguard
 
-A new Flutter project.
+This Arduino-based project integrates several sensors and modules to create an emergency detection and response system. It uses a flame sensor and an MQ-2 gas sensor to detect fire and smoke. When either sensor is triggered, the system activates an alarm by turning on an LED and relays. It then initiates an emergency call to pre-programmed contacts stored in EEPROM, using a SIM800L GSM module. The system supports up to 15 emergency contacts, and when a call is made, an audio recording is played using the DFRobot DFPlayer Mini module.
 
-## Getting Started
+The system also includes a LiquidCrystal I2C display to show status messages, such as system status, fire or smoke alerts, and call progress. The project allows interaction through Bluetooth commands, which can list, clear, or add emergency contacts, as well as control the relays. The software ensures reliable emergency response by handling multiple calls, playing a recorded message after a 15-second delay, and attempting subsequent calls if one fails.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The system provides real-time safety monitoring, with the flexibility to update contact numbers and system control remotely via Bluetooth, making it highly adaptable for emergency scenarios.
